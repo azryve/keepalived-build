@@ -1,0 +1,7 @@
+FROM ubuntu:trusty
+RUN apt-get update && apt-get install -y \
+	build-essential devscripts git \
+	debhelper libssl-dev libpopt-dev cdbs autoconf \
+	libnl-dev libsnmp-dev
+
+CMD /docker/entrypoint.sh

@@ -1,0 +1,4 @@
+FROM ubuntu:trusty
+COPY build/*.deb /tmp
+RUN apt-get update
+RUN dpkg -i /tmp/*.deb || apt-get install -fy
